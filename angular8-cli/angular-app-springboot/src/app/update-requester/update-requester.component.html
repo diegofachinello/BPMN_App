@@ -1,0 +1,36 @@
+<h3>Update Request</h3>
+<div [hidden]="submitted" style="width: 400px;">
+  <form (ngSubmit)="onSubmit()">
+    <div class="form-group">
+      <label for="name">Requester Name</label>
+      <input type="text" class="form-control" id="requesterName" required [(ngModel)]="requester.requesterName" name="requesterName" disabled>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Product Description</label>
+      <input type="text" class="form-control" id="productDescription" required [(ngModel)]="requester.productDescription" name="productDescription" disabled>
+    </div>
+
+    <div class="form-group">
+      <label for="name">Product Value</label>
+      <input type="text" class="form-control" id="productValue" required [(ngModel)]="requester.productValue" name="productValue" disabled>
+    </div>
+
+    <div class="form-group">
+    <label for="name">Request Status</label>
+    <input list="browsers" class="form-control" id="requestStatus" required [(ngModel)]="requester.requestStatus" name="requestStatus">
+    <datalist id="browsers">
+        <option value="Disapproved">
+        <option value="Approved">
+      </datalist>
+    </div>
+
+    <div class="form-group">
+        <label for="name">Disapprove Description</label>
+        <input type="text" class="form-control" id="disapproveDescription" required [(ngModel)]="requester.disapproveDescription" name="disapproveDescription">
+      </div>
+
+    <button type="submit" class="btn btn-success">Submit</button>
+    
+  </form>
+</div>

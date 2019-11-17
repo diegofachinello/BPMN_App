@@ -1,0 +1,32 @@
+<div class="panel panel-primary">
+    <div class="panel-heading">
+      <h2>Requester List</h2>
+    </div>
+    <div class="panel-body">
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Requester</th>
+            <th>Product</th>
+            <th>Value</th>
+            <th>Description</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let requester of request | async">
+            <td>{{requester.requesterName}}</td>
+            <td>{{requester.productDescription}}</td>
+            <td>{{requester.productValue}}</td>
+            <td>{{requester.disapproveDescription}}</td>
+            <td>{{requester.requestStatus}}</td>
+            <td><button (click)="deleteRequester(requester.id)" class="btn btn-danger">Delete</button>
+                <button (click)="requesterDetails(requester.id)" class="btn btn-info" style="margin-left: 10px">Details</button>
+                <button (click)="updateRequester(requester.id)" class="btn btn-warning" style="margin-left: 10px">Status</button>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>

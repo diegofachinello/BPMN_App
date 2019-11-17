@@ -1,0 +1,24 @@
+<h2>Request Details</h2> 
+
+<hr/>
+<div *ngIf="requester">
+  <div>
+    <label><b>Requester Name: </b></label> {{requester.requesterName}}
+  </div>
+  <div>
+    <label><b>Product Description: </b></label> {{requester.productDescription}}
+  </div>
+  <div>
+    <label><b>Product Value: </b></label> {{requester.productValue}}
+  </div>  
+  <div>
+    <label><b>Disapprove Description: </b></label> {{requester.disapproveDescription}}
+  </div>  
+  <div>
+    <label><b> Request Status: </b></label> {{requester.requestStatus}}
+  </div>  
+</div>
+
+<br>
+<br>
+<button (click)="list()" class="btn btn-primary">Back to Requester List</button><br>
